@@ -20,6 +20,9 @@ print(a)
 print(b)
 f="43"
 print(f)
+print(s)
+
+#type casting
 
 a=10
 b=str(a)
