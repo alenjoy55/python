@@ -69,6 +69,7 @@
 # print(c.rstrip())
 # d="456"
 # print(d.isdigit(
-print("{:<10} {:<8} {:<8}".format("name",'age','mark'))
-print("{:<10} {:<8} {:<8}".format("aaa",'20','55'))
-print("{:<10} {:<8} {:<8}".format("bbb",'25','60'))
+# print("{:<10} {:<8} {:<8}".format("name",'age','mark'))
+# print("{:<10} {:<8} {:<8}".format("aaa",'20','55'))
+# print("{:<10} {:<8} {:<8}".format("bbb",'25','60'))
+
