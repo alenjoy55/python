@@ -152,8 +152,34 @@
    0  1  2
    2  1  0"""
 
-for i in range(4):
+# for i in range(3):
+#     for j in range(3):
+#         if j==0:
+#             print('A',end='\t')
+#         elif j==1:
+#             print('B',end='\t')
+#         elif j==2:
+#             print('C',end='\t')
+#             print()
+"""A  B  C
+   A  B  C
+   A  B  C"""
+# a=1
+# for i in range(3):
+#    for j in range(3):
+#       print(a, end='\t')
+#       a+=2
+#    print()
+
+"""1  3  5
+   7  9  11
+   13 15 17"""
+
+for i in range(1,5):
+   print()
+   for j in range(1,i+1):
     
+    print(j,end='\t')
 
         
 
