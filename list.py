@@ -62,16 +62,131 @@
    [2,3,4,5,8,9,10]"""
 # print(l.index(2))
 """0"""
-l=[1,5,8,10,11]
-s=0
-for i in l:
-    if i%2==0:
-        print(i)
-        s+=i
-print("sum =",s)
+# l=[1,5,8,10,11]
+# s=0
+# for i in l:
+#     if i%2==0:
+#         print(i)
+#         s+=i
+# print("sum =",s)
 """8
   10
   sum=18"""
+#Reverse of string
+# l=['alen','welcome','home']
+# # for i in l:
+# #     print(i[::-1])
+"""nela
+   emoclew
+   emoh"""
+# l=[1,10,5.8,'abc',2]
+# s=0
+# for i in l:
+#     if (type(i))==int or type(i)==float:
+#         s+=i
+# print(s)
+"""18.8"""
+# l=[5,8,5,1,2,3,8,5]
+# a=[]
+# for i in l:
+#     if i not in a:
+#         a.append(i)
+# print(a)
+"""[5,8,1,2,3]"""
 
+# names=[]
+# limit=int(input("enter a limit : "))
+# for i in range(limit):
+#     name=input("enter a names : ")
+#     names.append(name)
+# print(names)    
+"""
+enter a limit5
+enter a names : alma
+enter a names : sreehari
+enter a names : deepak
+enter a names : ibin
+enter a names : alen
+['alma,'sreehari','deepak','ibin','alen']
+"""
+# std=[]
+# limit=int(input("enter a limit : "))
+# for i in range(limit):
+#     name=input("enter a name : ")
+#     age=int(input("enter age : "))
+#     mark=int(input("enter mark : "))
+#     std.append([name,age,mark])
+# print(std)
+"""
+enter a limit : 3
+enter a name : deepak
+enter age : 22
+enter mark : 65
+enter a name : ibin
+enter age : 22
+enter mark : 66
+enter a name : alen
+enter age : 22
+enter mark : 67
+[['deepak', 22, 65], ['ibin', 22, 66], ['alen', 22, 67]]
+"""
+#choice program
+# std=[]
+# while True:
+#     print("""
+#    1.add std
+#    2.view std
+#    3.udate std
+#    4.delete std
+#  """)
+#     choice=int(input("enter your choice : "))
+#     if choice==1:
+#         name=input("enter a name : ")
+#         age=int(input("enter age : "))
+#         mark=int(input("enter mark : "))
+#         std.append([name,age,mark])
+#     elif choice==2:
+#         print('{:<10}{:<5}{:<5}'.format('name','age','mark'))
+#         print('_'*10)
+#         for i in std:
+#             print('{:<10}{:<5}{:<5}'.format(i[0],i[1],i[2]))
+#output
+"""
+enter your choice : 1
+enter a name : alen
+enter age : 22
+enter mark : 65
+
+   1.add std
+   2.view std
+   3.udate std
+   4.delete std
+ 
+enter your choice : 1
+enter a name : deepak
+enter age : 22
+enter mark : 66
+
+   1.add std
+   2.view std
+   3.udate std
+   4.delete std
+ 
+enter your choice : 2
+name      age  mark 
+__________
+alen      22   65   
+deepak    22   66   
+
+   1.add std
+   2.view std
+   3.udate std
+   4.delete std
+"""
+
+
+
+
+    
 
 
