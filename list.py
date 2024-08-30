@@ -94,6 +94,7 @@
 # print(a)
 """[5,8,1,2,3]"""
 
+#limit 
 # names=[]
 # limit=int(input("enter a limit : "))
 # for i in range(limit):
@@ -138,6 +139,8 @@ enter mark : 67
 #    2.view std
 #    3.udate std
 #    4.delete std
+#    5.search
+#    6.exit
 #  """)
 #     choice=int(input("enter your choice : "))
 #     if choice==1:
@@ -147,9 +150,43 @@ enter mark : 67
 #         std.append([name,age,mark])
 #     elif choice==2:
 #         print('{:<10}{:<5}{:<5}'.format('name','age','mark'))
-#         print('_'*10)
+#         print('_'*5)
 #         for i in std:
 #             print('{:<10}{:<5}{:<5}'.format(i[0],i[1],i[2]))
+#     elif choice==3:
+#         name=input("enter name")
+#         f=0
+#         for i in std:
+#             if i[0]==name:
+#                 mark=int(input("enter a new mark"))
+#                 i[2]=mark
+#                 f=1
+#         if f==0:
+#          print("invalid name")
+#     elif choice==4:
+#         name=input("enter name")
+#         f=0
+#         for i in std:
+#             if i[0]==name:
+#                 std.remove(i)
+#                 f=1
+#         if f==0:
+#          print('invaild name')
+#     elif choice==5:
+#         name=input("enter name")
+#         f=0
+#         for i in std:
+#             if i[0]==name:
+#                 print(i)
+#                 f=1
+#     elif choice==6:
+#         break
+#     else:
+#         print("invalid choice")
+
+                
+
+        
 #output
 """
 enter your choice : 1
@@ -182,7 +219,43 @@ deepak    22   66
    2.view std
    3.udate std
    4.delete std
+
+   #deleting
+   name      age  mark 
+   _____
 """
+#employee details choice
+ems=[]
+while True:
+    print("""
+   1.registration id
+   2.view ems
+   3.udate ems
+   4.delete ems
+   5.search
+   6.add task
+ """)
+    choice=int(input("enter your choice : "))
+    if choice==1:
+        ems_name=input("enter a name : ")
+        ems_id=int(input("enter age : "))
+        age=int(input("enter mark : "))
+        salary=int(input("enter salary : "))
+        position=input("enter position : ")
+        experience=int(input("enter experience : "))
+        ems.append([ems_name,ems_id,age,salary,position,experience])
+    elif choice==2:
+       print('{:<10}{:<5}{:<5}'.format('name','id','age','salary','position','experience'))
+       print('_'*5)
+       for i in ems:
+            print('{:<10}{:<5}{:<5}{:<5}{:<10}{:<5}'.format(i[0],i[1],i[2],i[3],i[4],i[5]))
+    elif choice==3:
+        ems_name=input("enter the employee name : ")
+        f=0
+        for i in ems:
+            if i[0]==ems_name:
+                
+        
 
 
 
