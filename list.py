@@ -225,35 +225,35 @@ deepak    22   66
    _____
 """
 #employee details choice
-ems=[]
-while True:
-    print("""
-   1.registration id
-   2.view ems
-   3.udate ems
-   4.delete ems
-   5.search
-   6.add task
- """)
-    choice=int(input("enter your choice : "))
-    if choice==1:
-        ems_name=input("enter a name : ")
-        ems_id=int(input("enter age : "))
-        age=int(input("enter mark : "))
-        salary=int(input("enter salary : "))
-        position=input("enter position : ")
-        experience=int(input("enter experience : "))
-        ems.append([ems_name,ems_id,age,salary,position,experience])
-    elif choice==2:
-       print('{:<10}{:<5}{:<5}'.format('name','id','age','salary','position','experience'))
-       print('_'*5)
-       for i in ems:
-            print('{:<10}{:<5}{:<5}{:<5}{:<10}{:<5}'.format(i[0],i[1],i[2],i[3],i[4],i[5]))
-    elif choice==3:
-        ems_name=input("enter the employee name : ")
-        f=0
-        for i in ems:
-            if i[0]==ems_name:
+# ems=[]
+# while True:
+#     print("""
+#    1.registration id
+#    2.view ems
+#    3.udate ems
+#    4.delete ems
+#    5.search
+#    6.add task
+#  """)
+#     choice=int(input("enter your choice : "))
+#     if choice==1:
+#         ems_name=input("enter a name : ")
+#         ems_id=int(input("enter age : "))
+#         age=int(input("enter mark : "))
+#         salary=int(input("enter salary : "))
+#         position=input("enter position : ")
+#         experience=int(input("enter experience : "))
+#         ems.append([ems_name,ems_id,age,salary,position,experience])
+#     elif choice==2:
+#        print('{:<10}{:<5}{:<5}'.format('name','id','age','salary','position','experience'))
+#        print('_'*5)
+#        for i in ems:
+#             print('{:<10}{:<5}{:<5}{:<5}{:<10}{:<5}'.format(i[0],i[1],i[2],i[3],i[4],i[5]))
+#     elif choice==3:
+#         ems_name=input("enter the employee name : ")
+#         f=0
+#         for i in ems:
+#             if i[0]==ems_name:
                 
         
 
