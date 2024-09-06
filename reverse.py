@@ -9,11 +9,12 @@
 #output
 '''enter a number: 123 
 one two three '''
-l=[{'name':'alen','age':20,'lang':['mal','eng']}]
-print(l)
-s=input("enter a new language: ")
-l[0]['lang'].append(s)
-print(l)
+# l=[{'name':'alen','age':20,'lang':['mal','eng']}]
+# print(l)
+# s=input("enter a new language: ")
+# l[0]['lang'].append(s)
+# print(l)
+
 
 
 
