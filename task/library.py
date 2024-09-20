@@ -1,5 +1,5 @@
-lb=[]
-book=[]
+lb=[{'id':102,'name':'alen','place':'tsr','address':'mal','mob':1234,'email_id':'alen','password':'123','book':[]}]
+book=[{'b_id':10,'book_name':'tales','stock':6,'price':45},{'b_id':11,'book_name':'strange','stock':3,'price':250}]
 def register():
         if len(lb)==0:
             id=101
@@ -18,7 +18,7 @@ def register():
             address=input("enter your address: ")
             mob=int(input("enter your mobile number: "))
             passw=input("set password: ")
-            lb.append({'id':id,'name':name,'place':place,'address':address,'mob':mob,'email_id':email,'password':passw})
+            lb.append({'id':id,'name':name,'place':place,'address':address,'mob':mob,'email_id':email,'password':passw,'book':[]})
             print("registration successful!")
 def login():
      uname=input("enter your username(email): ")
@@ -75,7 +75,41 @@ def view_users():
     print("{:<10}{:<15}{:<15}{:<15}{:<15}{:<15}".format('id','name','place','address','mob','email'))
     print('_'*70)
     for i in lb:
-         print("{:<10}{:<15}{:<15}{:<15}{:<15}{:<15}".format(i['id'],i['name'],i['place'],i['address'],i['mob'],i['email']))
+         print("{:<10}{:<15}{:<15}{:<15}{:<15}{:<15}".format(i['id'],i['name'],i['place'],i['address'],i['mob'],i['email_id']))
+def view_profile(user):
+     print('_'*70)
+     print("{:<10}{:<15}{:<15}{:<15}{:<15}{:<15}".format('id','name','place','address','mob','email'))
+     print('_'*70)
+     print("{:<10}{:<15}{:<15}{:<15}{:15}{:<15}".format(user['id'],user['name'],user['place'],user['address'],user['mob'],user['email_id']))
+def take_book(user):
+     id=int(input("enter the book id: "))
+     f=0
+     for i in book:
+          if i['b_id']==id:
+               f=1
+               if i['stock']>0:
+                    user['book'].append(i['b_id'])
+                    i['stock']-=1
+               else:
+                    print("out of stock: ")
+     if f==0:
+          print("invalid id!")
+def return_book(user):
+     id=int(input("enter the book id: "))
+     f=0
+     for i in book:
+          if i['b_id']==id and id in user['book']:
+               f=1
+               i['stock']+=1
+               user['book'].remove(id)
+               print("book returned")
+     if f==0:
+          print("book not found")
+
+def book_hand(user):
+     print(user['book'])               
+
+
           
      
      
@@ -111,6 +145,26 @@ while True:
                    elif sub_ch==5:
                         view_users()
          elif f==2:
-                print("user login")
+              while True:
+                   print('''
+                    1.view profile
+                    2.view book
+                    3.take book
+                    4.return book
+                    5.book in hand
+                    6.exit
+                    ''')
+                   user_choice=int(input("enter your choice: "))
+                   if user_choice==1:
+                        view_profile(user)
+                   elif user_choice==2:
+                        view_book()
+                   elif user_choice==3:
+                        take_book(user)
+                   elif user_choice==4:
+                        return_book(user)
+                   elif user_choice==5:
+                        book_hand(user)
+                        
          else:
             print("invalid uname or password: ")
