@@ -165,6 +165,8 @@ while True:
                         return_book(user)
                    elif user_choice==5:
                         book_hand(user)
+                   elif user_choice==6:
+                        break
                         
          else:
             print("invalid uname or password: ")

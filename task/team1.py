@@ -4,44 +4,94 @@ football = []
 while True:
     print("""
     1. Add player
-    2. Display player Details
-    3. Add coach
-    4. Display coach Details
-    5. coach mangement
-    6. Player mangement
-    7. Exit
+    2. view player Details
+    3. player updates
+    4. search player
+    5. player schedule
+    6. view schedule
+    7. delete player
+    8.add coach 
+    9.view coach details
+    10.update coach
+    11.delete coach
+    12.exit
     """)
     
     choice = int(input("Enter Your Choice: "))
     if choice == 1:
-        pl_id=int(input("Enter player ID : "))
+        id=int(input("Enter player ID : "))
         pl_name = input("Enter a Name: ")
         pl_nation = input("enter player nation: ")
         pl_position = input("Enter position: ")
-        pl_salary=int(input("Enter a salary: "))
-        football.append({'pl_id':pl_id,'name': pl_name,'nation':pl_nation,'position':pl_position,'salary':pl_salary})
+        pl_jersy=int(input("Enter a jersy number: "))
+        football.append({'id':id,'name': pl_name,'nation':pl_nation,'position':pl_position,'pl_jersy':pl_jersy})
         print("Player added successfully!")
         
     elif choice == 2:
         print('_' * 70)
-        print('{:<10}{:<15}{:<15}{:<15}{:<15}'.format('pl_ID', 'Name','nation', 'Position', 'Salary'))
+        print('{:<10}{:<15}{:<15}{:<15}{:<15}'.format('id', 'Name','nation', 'Position', 'jersy'))
         print('*' * 70)
         for i in football:
-                print('{:<10}{:<15}{:<15}{:<15}{:<15}'.format(i['pl_id'], i['name'],i['nation'],i['position'], i['salary']))
+                print('{:<10}{:<15}{:<15}{:<15}{:<15}'.format(i['id'], i['name'],i['nation'],i['position'], i['pl_jersy']))
+        # else:
+        #      print("player not found!")
     
     elif choice== 3:
-        print("ADDING A COACH ENTER THE DETAILES BELOW ")
-        ch_id = int(input("Enter coach id: "))
-        name = input("Enter a coach name: ")
-        salary = int(input("Enter coach salary: "))
-        football.append({ 'ch_id': ch_id,'name': name, 'salary': salary})
-        print("coach added successfully!")
-    
-    elif choice== 4:
-        print('_' * 30)
-        print('{:<10}{:<10}{:<10}'.format('ch_id','name','salary'))
-        print('*' * 30)
+         pl_id=input("enter the id of player to update: ")
+         for i in football:
+              if i['id']==id:
+                   pl_position=input("enter a new position: ")
+                   pl_jersy=int(input("enter a new jersy number: "))
+                   i['position']=pl_position
+                   i['pl_jersy']=pl_jersy
+                   print("player updated successfully")
+                   break
+         else:
+              print("player id not in database.")
+    elif choice==4:
+        pl_id = input("Enter the player id to Search: ")
         for i in football:
-            print('{:<10}{:<10}{:<10}'.format(i['ch_id'], i['name'], i['salary']))
-   
+            if i['id'] == id:
+                print('{:<10}{:<15}{:<15}{:<15}{:<15}'.format('id','name', 'nation', 'position','jersy'))
+                print('{:<10}{:<15}{:<15}{:<15}{:<15}'.format(i['id'],i['name'], i['nation'], i['position'],i['pl_jersy']))
+                break
+        else:
+            print("***Player not found***")
+    elif choice==5:
+         pl_id=int(input("ENTER PLAYER ID: "))
+         pl_name = input("Enter a Name: ")
+         pl_train = input("enter player training mod: ")
+         section = input("Enter train section: ")
+         time=int(input("Enter a time: "))
+         football.append({'pl_id':pl_id,'pl_name': pl_name,'train':pl_train,'section':section,'time':time})
+         print("PLAYER SCHEDULED SUCCESSFULLY! ")
+    elif choice==6:
+         print('_'*60)
+         print('{:<10}{:<15}{:<15}{:<15}{:<15}'.format('pl_id','name','train','section','time'))
+         print('_'*60)
+         for i in football:
+               print('{:<10}{:<15}{:<15}{:<15}{:<15}'.format(i['id'],i['name'],i['pl_train'],i['section'],i['time']))
+    elif choice==7:
+         id=int(input("enter the id to be delete: "))
+         f=0
+         for i in football:
+              if i['id']==id:
+                   football.remove(i)
+                   f=1
+                   print("removed successfully! ")
+         if f==0:
+              print("invalid id!!!")
+    elif choice==8:
+         ch_id=int(input("enter coach id: "))
+         ch_name=input("enter coach name: ")
+         ch_nation=input("coach nation: ")
+         tatics=input("enter coach tatics: ")
+         contract=int(input("enter contract: "))
+         football.append({'coach_id':ch_id,'coach_name':ch_name,'nation':ch_nation,'tatics':tatics,'contract':contract})
+         print("coach added successfully! ")
+
+         
+
+
+              
 
