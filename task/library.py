@@ -40,10 +40,43 @@ def add():
     bname=input("enter name of the book: ")
     stock=int(input("enter the book stock: "))
     price=int(input("enter the book price: "))
-    book.append({'id':id,'book_name':bname,'stock':stock,'price':price})
+    book.append({'b_id':id,'book_name':bname,'stock':stock,'price':price})
 def view_book():
      print('_'*40)
-     print("{:<10}{:<15}{:<10}{:<10}")
+     print("{:<10}{:<15}{:<10}{:<10}".format('book_id','book_name','stock','price'))
+     print('_'*40)
+     for i in book:
+          print("{:<10}{:<15}{:<10}{:<10}".format(i['b_id'],i['book_name'],i['stock'],i['price']))
+def update():
+     id=int(input("enter the update book id: "))
+     f=0
+     for i in book:
+          if i['b_id']==id:
+               f=1
+               stock=int(input("enter the updated stock: "))
+               price=int(input("enter updated price: "))
+               i['stock']=stock
+               i['price']=price
+               print("updated successfully")
+     if f==0:
+          print("invalid id!!!")
+def delete_book():
+     id=int(input("enter the book id to be removed: "))
+     f=0
+     for i in book:
+          if i['b_id']==id:
+               f=1
+               book.remove(i)
+               print("DELETED!!")
+     if f==0:
+          print("invalid id!!!")
+def view_users():
+    print('_'*70)
+    print("{:<10}{:<15}{:<15}{:<15}{:<15}{:<15}".format('id','name','place','address','mob','email'))
+    print('_'*70)
+    for i in lb:
+         print("{:<10}{:<15}{:<15}{:<15}{:<15}{:<15}".format(i['id'],i['name'],i['place'],i['address'],i['mob'],i['email']))
+          
      
      
 while True:
@@ -71,8 +104,12 @@ while True:
                         add()
                    elif sub_ch==2:
                         view_book()
-
-
+                   elif sub_ch==3:
+                        update()
+                   elif sub_ch==4:
+                        delete_book()
+                   elif sub_ch==5:
+                        view_users()
          elif f==2:
                 print("user login")
          else:
