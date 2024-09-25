@@ -31,5 +31,7 @@
 # f.seek(0)
 # c=f.readlines()
 # print(c)
-f=open('python/game.txt','w')
-f.write('alen11')
+# f=open('python/game.txt','w')
+# f.write('alen11')
+
+

@@ -4,10 +4,10 @@ no=int(input("enter a number: "))
 # for i in range(1,10+1):
 #    c= print(i,'*',no,'=',i*no)
 #    f.write(str(i)+'*'+'*'+str(no)+'='+str(i*no)+'\n')
-for i in range(1,no+1):
-    for j in range(1,11):
-        f.write(str(j)+'*'+str(i)+'='+str(i*j)+'\n')
-        f.write('\n')
+for i in range(1,11):
+    for j in range(1,no+1):
+        f.write(str(i)+'*'+str(j)+'='+str(i*j)+'\t')
+    f.write('\n')
    
    
 
