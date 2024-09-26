@@ -9,7 +9,14 @@ while True:
     5. Search a product
     6. Exit
     """)
-    choice = int(input("Enter Your Choice: "))
+    while True:
+        try:
+            choice = int(input("Enter Your Choice: "))
+            break
+        except:
+            pass
+
+
     
     if choice == 1:
         name = input("Enter a Name: ")
