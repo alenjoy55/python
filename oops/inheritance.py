@@ -127,3 +127,115 @@
 # arun.result()
 # arun.notes()
 # arun.subjects()
+
+#HYBRID INHERITANCE
+# class synnefo:
+#     def php(self):
+#         print('php')
+#     def python(self):
+#         print('python')
+#     def reg(self):
+#         print('register')
+# class teacher(synnefo):
+#     def notes(self):
+#         print('notes')
+#     def attendence(self):
+#         print('attendence')
+# class nonteach(synnefo):
+#     def enquiry(self):
+#         print('enquiry')
+#     def office(self):
+#         print('office')
+# class student(teacher):
+#     def labs(self):
+#         print('labs')
+#     def exam(self):
+#         print('exam')
+#     def note_collection(self):
+#         print('notes_collection')
+
+# arun=student()
+# arun.attendence()
+# arun.exam()
+# arun.note_collection()
+
+# a=nonteach()
+# a.enquiry()
+# a.office()
+
+
+# b=teacher()
+# b.attendence()
+# b.notes()
+# b.python()
+
+class clg():
+    def m_tech(self):
+        print('m_tech')
+    def msc(self):
+        print('msc')
+    def reg(self):
+        print('reg')
+class mangement(clg):
+    def exam_notifi(self):
+        print('exam_notifi')
+    def results(self):
+        print('results')
+class chairman(clg):
+    def clg_profit(self):
+        print('clg_profit')
+    def staff_dtls(self):
+        print('staff_details')
+    def account_dtls(self):
+        print('account_dtls')
+class teacher(mangement):
+    def notes(self):
+        print('notes')
+    def syllabus(self):
+        print('syllabus')
+    def attendence(self):
+        print('attendence')
+class non_teacher(mangement):
+    def enquiry(self):
+        print('enquiry')
+    def admission_pro(self):
+        print('addmission_pro')
+class student(teacher):
+    def notes_collection(self):
+        print('notes_collection')
+    def labs(self):
+        print('labs')
+    def identity_card(self):
+        print('identity_card')
+
+s=student()
+s.reg()
+s.m_tech()
+s.attendence()
+s.syllabus()
+s.identity_card()
+s.labs()
+s.notes_collection()
+s.exam_notifi()
+s.results
+
+a=teacher()
+a.reg()
+a.m_tech()
+a.syllabus()
+a.attendence()
+a.exam_notifi()
+a.results()
+
+n=non_teacher()
+n.enquiry()
+n.admission_pro()
+
+m=mangement()
+m.exam_notifi()
+m.results()
+
+c=chairman()
+c.account_dtls()
+c.clg_profit()
+c.staff_dtls()
