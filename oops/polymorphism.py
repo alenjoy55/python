@@ -16,3 +16,28 @@
 
 # a=std()
 # a.notes()
+
+# class school:
+#     def notes(self,*sub):
+#         print('school notes',sub)
+# class std(school):
+#     def notes(self):
+#         super().notes('python','jango')
+#         print('std notes')
+        
+
+# s=std()
+# s.notes()
+
+class school:
+    def notes(self,*sub):
+        print('school notes',sub)
+class std(school):
+    def notes(self,*sub):
+        super().notes(sub)
+        print('std notes')
+
+s=std()
+s.notes('python','web','jango')
+        
+
