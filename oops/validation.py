@@ -1,7 +1,7 @@
 import re
 a='abcd'
-# re.search('a',a)
-# print(re.search('a',a))
+re.search('a',a)
+print(re.search('a',a))
 # print(re.search('b',a))
 # print(re.search('c',a))
 # print(re.search('d',a))

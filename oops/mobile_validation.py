@@ -5,5 +5,16 @@ import re
 # else:
 #     print('invalid')
 
-a='alen292@gmail.com'
-print(re.search('^[a-z].*@gmail.com$',a))
+#Email validation
+
+# a='alen292@gmail.com'
+# print(re.search('^[a-z].*@gmail.com$',a))
+
+#Password validation
+# a="Alen@1234"
+# if len(a)>=8 and re.search('[A-z0-9].*[@#$%0-9]',a) and not(a.isdigit()):
+#     print('valid password')
+# else:
+#     print('invalid password') 
+
+
