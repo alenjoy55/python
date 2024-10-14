@@ -28,10 +28,11 @@ cur =con.cursor()
 # cur.execute("delete from std where roll_no=%s ",(roll,))
 
 #user input
-roll=int(input("enter roll no: "))
-data=cur.execute("select * from std where roll_no=%s",(roll,))
-print('_'*60)
-print('{:<10}{:<10}{:<10}'.format('roll','name','age'))
-print('_'*60)
-for i in cur:
-     print('{:<10}{:<10}{:<10}'.format(i[0],i[1],i[2]))
+# roll=int(input("enter roll no: "))
+# data=cur.execute("select * from std where roll_no=%s",(roll,))
+# print('_'*60)
+# print('{:<10}{:<10}{:<10}'.format('roll','name','age'))
+# print('_'*60)
+# for i in cur:
+#      print('{:<10}{:<10}{:<10}'.format(i[0],i[1],i[2]))
+
